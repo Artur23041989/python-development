@@ -1,5 +1,4 @@
 #Типы данных
-from os.path import isabs
 
 # Integer (int) - целые числа
 a = 6
