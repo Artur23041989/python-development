@@ -1,4 +1,5 @@
 import requests
+
 """
 try:
     блок,
@@ -96,18 +97,31 @@ from urllib3 import request
 
 
 # Имитируем ошибу 'ruuu'
-def get_page(url):
-    try:
-        response = requests.get(url)
-        print(response.status_code)
-        print(response.text)
-    except:
-        print("Error")
-    print('code')
-url = "https://ruuu.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0"
-get_page(url)
+# def get_page(url):
+#     try:
+#         response = requests.get(url)
+#         print(response.status_code)
+#         print(response.text)
+#     except:
+#         print("Error")
+#     print('code')
+# url = "https://ruuu.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0"
+# get_page(url)
 
 
+"""
+Пишем функцию, которая будет проходить по всем 
+символам в строке и суммировать те, которые являются цыфрами
+"""
+number_str = '1a2a3a4a5'
+def get_sum_numbers(number_str):
+    a = 0
+    for char in number_str:
+        if char.isdigit():
+            a +=int(char)
+    return a
+result = get_sum_numbers(number_str)
+print(result)
 
 
 
