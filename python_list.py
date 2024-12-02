@@ -9,9 +9,9 @@ users_2 = ['Dima', 'Vova', 'Elena']
 print(users_2[0])
 print(users_2[-1])
 print(users_2[1])
-#print(users_2[4]) # выдаст ошибку
+#print(users_2[4]) - выдаст ошибку
 
-# добавление элементов в список
+# добавление элементов в список. Добавлять можно только 1 элемент
 users_2.append('Olga')
 
 # расширение списк аэлементами другого списка
@@ -22,19 +22,21 @@ users_2.extend(['Natasha','Sveta'])
 # добавление элемента в произвольное место
 users_2.insert(0, 'Zero')
 users_2.insert(-1, 'Last')
-#users_2.insert(len(users_2), 'Last!!!")
+users_2.insert(len(users_2), 'Last!!!')
 print(users_2)
 
 # получение количества элементов списка
 print(len(users_2))
 
 # pop - удалить элемент и получить его
+element = users_2.pop() # без указания индекса вытащит последний элемент
+print(element)
 print(users_2.pop(0))
 
-# count - подсчет количества элементов в списке
+# count - подсчет количества одинаковых элементов в списке
 print(users_2.count('Sasha'))
 
-# users_2.remove('Sasha') (первого, которого нашел)
+# users_2.remove('Sasha') (удаляет первый элемент, который нашел)
 print(users_2)
 
 # получение индекса элемента по его значению (первого, которого нашел)
@@ -45,9 +47,9 @@ print(users_2.index('Sasha', 2, 5))
 users_3 = [1,2,3,4]
 print(users_2 + users_3)
 
-# in - оператор для проверки наличия элемента в список
+# in - оператор для проверки наличия элемента в списке
 name = 'Sasha'
-if name  in users_2:
+if name in users_2:
     print('ok')
 else:
     print('not found')
