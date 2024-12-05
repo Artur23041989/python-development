@@ -25,4 +25,18 @@ print(*c)
 # - список значений словаря
 # - элементы в формате ключ -> значение
 #   (f-строка)
-name_car = input(Введите марку машины)
+brand = input('Введите марку машины: ')
+model = input('Введите модель машины: ')
+year = input ('Введите год выпуска машины: ')
+color = input('Введите цвет машины: ')
+car_info = {
+    'Марка': brand,
+    'Модель': model,
+    'Год выпуска': year,
+    'Цвет': color
+}
+print('Список ключей словаря: ', list(car_info.keys()))
+print('Список значений словаря: ', list(car_info.values()))
+print('Элементы в формате ключ: значние: ')
+for key, value in car_info.items():
+    print(f'{key}: {value}')
