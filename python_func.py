@@ -1,15 +1,28 @@
 def hello():
     print('Hello')
+hello()
+
+
+
 
 def bye():
         print('Bye')
-
-hello()
 bye()
+
+
+
 
 def print_name(name):
     print(name)
+# name = "Masha"
+# last_name = "Dima"
+# print_name(name = "Maxim")
+# print_name(name = name)
+# print_name(name = last_name)
 
+
+
+# сигнатура функции - имя и параметры
 def print_info(name, lastname, age, city='SPb'):
     info = {
         'name': name,
@@ -18,14 +31,11 @@ def print_info(name, lastname, age, city='SPb'):
         'city': city
     }
     print(info)
-
     return info
-
 user_name = "Dmitry"
 user_lastname = 'Ivanov'
 user_age = 32
 user_city = 'Moscow'
-
 # именованные аргументы
 #print_info(name=user_name,age=user_age, city=user_city, lastname=user_lastname)
 
@@ -38,11 +48,8 @@ user_city = 'Moscow'
 result = print_info(name=user_name, age=user_age, lastname=user_lastname, city='Moscow')
 print(result)
 
-# name = "Masha"
-# last_name = "Dima"
-# print_name(name = "Maxim")
-# print_name(name = name)
-# print_name(name = last_name)
+
+
 
 def text_analyse(text):
     stat = {}
@@ -52,9 +59,13 @@ def text_analyse(text):
 
 print(text_analyse(text='hello'))
 
+
+
 def text_to_list(text: str):
     return text.split(' ')
 print(text_to_list(text="I love python string"))
+
+
 
 def text_to_list(text: str)-> list[int]:
     return text.split(' ')
