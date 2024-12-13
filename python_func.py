@@ -85,11 +85,11 @@ def get_emails(in_emails: list[str], domen: str = '.ru') -> list:
 
     return emails
 
-print(get_emails(in_emails=emails))
+print(get_emails(in_emails=emails, domen='@mail.ru')) # получаем только c mail
 
 
 def check_age(age: int|str)-> bool:
-    if isinstance(age, int):
+    if isinstance(age, int): # проверка является ли возраст числом
         if age < 18:
             return  False
         else:
@@ -103,7 +103,9 @@ def check_age(age: int|str)-> bool:
         else:
             return False
 
-age = '12'
+    return False
+
+age = '30'
 if check_age(age):
     print('OK')
 else:
