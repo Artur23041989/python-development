@@ -1,16 +1,19 @@
 import os
 import shutil
 from fileinput import filename
-
 from python_dict import users_info
+
+
 # функция open(file, mode, encoding) - открывает файл
 # file - путь к файлу (абсолютный или относительно скрипта)
 # mode - режим открытия файла
-# Основные режимы: r - чтение, w - запись с пересозданием файла, a - добавление в конец файла
 # encoding - кодировка
-from python_set import names
 
-#
+# Основные режимы: r - чтение, w - запись с пересозданием файла, a - добавление в конец файла
+
+
+
+
 myfile = open(file='myfile.txt', mode='w', encoding='utf-8')
 # write - запись в файл
 myfile.write('Python!!!\n')

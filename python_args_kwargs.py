@@ -45,15 +45,19 @@ get_info(name='alex')
 #     print(f'Владелец - {owner}')
 #     for key, value in pets.items():
 #         print(f"{key} - {value}")
+#         или
+#     for key in pets:
+#         print(f'{key} - {pets[key]}')
+
 # print_pet_names(owner='Dima', dog="Tima", cat="Barsic")
 
 
 
-# def print_pet_names(*args, **kwargs):
-#     print(f'Владелец - {args[0]}')
-#     for key in kwargs.keys():
-#         print(f"{key} - {kwargs[key]}")
-# print_pet_names('Alex', dog="Tusik", cat="Barsic")
+def print_pet_names(*args, **kwargs):
+    print(f'Владелец - {args[0]}')
+    for key in kwargs.keys():
+        print(f"{key} - {kwargs[key]}")
+print_pet_names('Alex', dog="Tusik", cat="Barsic")
 
 
 

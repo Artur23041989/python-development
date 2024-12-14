@@ -33,7 +33,7 @@ from functools import reduce
 # print(list_double_numbers)
 
 # double = lambda x: int(x)**2
-# def double(x):
+# def double(x: str)->int: x - строка -> возвращает число int
 #     if x.isdigit():
 #         return int(x)**2
 #     else:

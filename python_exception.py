@@ -9,7 +9,7 @@ except:
     действия,
     в случае
     ошибки
-finally:
+finally: применяется редко!!!
     блок кода,
     который выполнится в любом случае
 """
@@ -67,9 +67,8 @@ from urllib3 import request
 #     if not mydict.get('age'):
 #         print(mydict.get('age'))
 #         raise Exception('Такого ключа нет!!!')
-# except Exception as err:
+# except Exception as err: обработать как переменную err
 #     print(err)
-
 
 
 
@@ -77,11 +76,12 @@ from urllib3 import request
 #     if age > 102:
 #         raise  Exception('Возраст слишком большой')
 #     return  age
-#
-# try:
+## try:
 #     print(check_age(226))
 # except:
 #     print('Возникла ошибка')
+
+
 
 
 # HTTP
@@ -95,11 +95,10 @@ from urllib3 import request
 
 
 
-
 # Имитируем ошибу 'ruuu'
 # def get_page(url):
 #     try:
-#         response = requests.get(url)
+#         response = requests.get(url) - отправка запроса, в переменную занесится ответ от сервера
 #         print(response.status_code)
 #         print(response.text)
 #     except:
