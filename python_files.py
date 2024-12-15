@@ -1,7 +1,6 @@
 import os
 import shutil
-from fileinput import filename
-from python_dict import users_info
+import json
 
 
 # функция open(file, mode, encoding) - открывает файл
@@ -77,20 +76,24 @@ else:
         pass
 
 
-# rename file
+# rename file переименование файла
 # if os.path.exists(file_name):
 #     file_name_new = f"new_{file_name}"
 #     os.rename(file_name, file_name_new)
 
+
+
 # if os.path.exists(file_name):
-#     os.remove(file_name_new)
+#     os.remove(file_name_new) - удаление файла
 
 
 filename_new = f"new_{file_name}"
 if os.path.exists(file_name):
-    os.rename(file_name, filename_new)
-    print(f'Файл {file_name} --> {filename_new}')
-
+    if not os.path.exists(filename_new):
+        os.rename(file_name, filename_new)
+        print(f'Файл {file_name} --> {filename_new}')
+    else:
+        print(f'Файл {filename_new} уже существует!')
 
 if os.path.exists(filename_new):
     os.remove(filename_new)
@@ -106,7 +109,7 @@ os.makedirs(dir_name, exist_ok=True)
 
 
 # удаление каталога
-#os.rmdir(dir_name)
+# os.rmdir(dir_name)
 with open(file=f'{dir_name}/{file_name}', mode='w', encoding='utf-8') as my_file:
     pass
 
@@ -121,9 +124,19 @@ info = {
         'first_mob': '233543664',
         'second_mob': '4546478',
     }
-},
+}
+users_info = [
 {
     'name': 'Alex',
+    'age': 24,
+    'lang': ['python', 'js'],
+    'phones': {
+        'first_mob': '233543664',
+        'second_mob': '4546478',
+    }
+},
+{
+    'name': 'Dima',
     'age': 24,
     'lang': ['python', 'js'],
     'phones': {
@@ -134,7 +147,11 @@ info = {
 ]
 
 with open('user.json', 'w') as file:
-    json.dump(users_info, file)
+    json.dump(users_info, file, indent=2)
+
+with open('user.json', 'r') as file:
+    data = json.load(file)
+    print(data)
 
 
 

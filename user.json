@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Alex",
+    "age": 24,
+    "lang": [
+      "python",
+      "js"
+    ],
+    "phones": {
+      "first_mob": "233543664",
+      "second_mob": "4546478"
+    }
+  },
+  {
+    "name": "Dima",
+    "age": 24,
+    "lang": [
+      "python",
+      "js"
+    ],
+    "phones": {
+      "first_mob": "233543664",
+      "second_mob": "4546478"
+    }
+  }
+]
