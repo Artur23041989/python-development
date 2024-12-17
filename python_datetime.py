@@ -40,7 +40,12 @@ from datetime import timedelta
 # print(today_new + deadline)
 
 now = datetime.now()
-deadline = datetime(year=2024, month=12, day=20)
-print(deadline - now)
+deadline = datetime(year=2024, month=12, day=31)
+# print(deadline - now)
+
+if deadline < now:
+    print("Срок вышел")
+else:
+    print(f"{(deadline - now).days} дней")
 
 
