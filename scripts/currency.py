@@ -1,19 +1,17 @@
-from textwrap import indent
-
 import requests
 import json
 from bs4 import BeautifulSoup as Bs
 from requests.exceptions import ConnectionError
 
-from python_set import numbers
 
 
+# ПОЛУЧЕНИЕ HTML СТРАНИЧКИ!!!
 def get_html(url: str) -> str | None:
     try:
         response = requests.get(url)
         status = response.status_code
         # если не успешный запрос и не переадресация то ОШИБКА
-        if status != 200 and str(status)[0] != 3:
+        if status != 200 and str(status)[0] != 3: # 404, 503, 301
             print(f"Ошибка запроса. Код ответа - {status}")
             return None
         print(f'Код ответа - {status}')
@@ -24,12 +22,22 @@ def get_html(url: str) -> str | None:
         print('error')
         return None
 
+# ФУНКЦИЯ ПАРСИНГА HTML СТРАНИЧКИ!!!
 def parse_html(html: str) -> dict:
-    courses = {}
+    courses = {} # создание пустого словаря
+
+    # доступ к странице
     soup: Bs = Bs(html, 'html.parser')
+
+    # получение даты со страницы и сохранение в переменную
     current_date = soup.find('h2', class_='h2 blue').text.split('\n')[-1].strip()[:10]
+
+    # получение всей таблицы со страницы и сохранение в переменную
     table = soup.find('table', class_='js_sortable')
+
+    # получение всех строк из таблицы и сохранение в переменную
     rows = table.find_all('tr')[2:]
+
     courses[current_date] = {}
     for row in rows:
         if not row.find('td', class_='t-center'):
@@ -39,7 +47,7 @@ def parse_html(html: str) -> dict:
         txt_code = code.split()[1]
 
         name = row.find('td', class_='t-left').text.split('\n')[0]
-        value = row.find('td', class_='t-right').text.strip()
+        value = row.find('td', class_='t-right').text.strip() # strip - удалили не нужные символы слева и справа
         print(f'{number_code}-{txt_code} {name} {value}')
 
         courses[current_date][txt_code] = {
@@ -49,7 +57,7 @@ def parse_html(html: str) -> dict:
         }
     return courses
 
-    pass
+
 
 def write_data_to_json(data: dict) -> None:
     with open('courses.json', 'w', encoding='utf-8') as file:
