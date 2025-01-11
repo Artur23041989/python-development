@@ -11,6 +11,7 @@ def parser_website(url):
 
 def parser_html(html: str):
     soup = Bs(html, 'html.parser')
+    category_links = []
     # собираю ссылки на нумерацию страниц на сайте
     # способ 1
     link_page_1 = soup.find('a', href="index1_page_1.html").text
@@ -24,11 +25,15 @@ def parser_html(html: str):
     print(*links_page)
 
     # собираю ссылки на категории товаров
+    nav_menu = soup.find_all('div', class_='nav_menu')
+    for div in nav_menu:
+        # Ищем все ссылки внутри текущего div
+        links = div.find_all('a')
+        for link in links:
+            href = link.get('href')  # Получаем href
+            category_links.append(href)
 
-
-    pass
-
-
+    print(category_links)
 
 
 
