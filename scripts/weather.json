@@ -1,0 +1,44 @@
+{
+  "Понедельник, 13 января": {
+    "Ночь": {
+      "weather_temperature": "-10°",
+      "weather_type": "Незначительная облачность",
+      "weather_feeling": "-10°",
+      "weather_probability": "2%",
+      "weather_pressure": "769",
+      "weather_wind": " 1.2",
+      "weather_nw": "северо-западный",
+      "weather_humidity": "84%"
+    },
+    "Утро": {
+      "weather_temperature": "-8°",
+      "weather_type": "Незначительная облачность",
+      "weather_feeling": "-11°",
+      "weather_probability": "2%",
+      "weather_pressure": "770",
+      "weather_wind": " 1.8",
+      "weather_nw": "северо-западный",
+      "weather_humidity": "88%"
+    },
+    "День": {
+      "weather_temperature": "-3°",
+      "weather_type": "Пасмурно",
+      "weather_feeling": "-6°",
+      "weather_probability": "3%",
+      "weather_pressure": "769",
+      "weather_wind": " 3.3",
+      "weather_nw": "юго-западный",
+      "weather_humidity": "94%"
+    },
+    "Вечер": {
+      "weather_temperature": "-2°",
+      "weather_type": "Преимущественно облачно",
+      "weather_feeling": "-6°",
+      "weather_probability": "1%",
+      "weather_pressure": "765",
+      "weather_wind": " 5.9",
+      "weather_nw": "юго-западный",
+      "weather_humidity": "88%"
+    }
+  }
+}
