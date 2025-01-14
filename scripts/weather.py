@@ -21,7 +21,6 @@ def get_html(url: str) -> str | None:
         print(f"Ошибка запроса.\n{err}")
         return None
 
-
 def get_weather_from_day(html: str) -> dict:
     soup = Bs(html, 'html.parser')
     weather_info = {}
