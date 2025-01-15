@@ -1,44 +1,44 @@
 {
-  "Вторник, 14 января": {
+  "Среда, 15 января": {
     "Ночь": {
-      "weather_temperature": "0°",
-      "weather_type": "Снег",
-      "weather_feeling": "-4°",
-      "weather_probability": "60%",
-      "weather_pressure": "757",
-      "weather_wind": " 3.7",
-      "weather_nw": "юго-западный",
-      "weather_humidity": "89%"
+      "weather_temperature": "+2°",
+      "weather_type": "Пасмурно",
+      "weather_feeling": "0°",
+      "weather_probability": "5%",
+      "weather_pressure": "755",
+      "weather_wind": " 1.5",
+      "weather_nw": "северо-западный",
+      "weather_humidity": "95%"
     },
     "Утро": {
       "weather_temperature": "0°",
-      "weather_type": "Пасмурно",
-      "weather_feeling": "-4°",
-      "weather_probability": "25%",
-      "weather_pressure": "752",
-      "weather_wind": " 3.8",
-      "weather_nw": "юго-западный",
-      "weather_humidity": "91%"
+      "weather_type": "Ясно",
+      "weather_feeling": "0°",
+      "weather_probability": "2%",
+      "weather_pressure": "763",
+      "weather_wind": " 1.0",
+      "weather_nw": "северный",
+      "weather_humidity": "88%"
     },
     "День": {
-      "weather_temperature": "+2°",
-      "weather_type": "Пасмурно",
-      "weather_feeling": "-1°",
-      "weather_probability": "16%",
-      "weather_pressure": "750",
-      "weather_wind": " 3.1",
-      "weather_nw": "западный",
-      "weather_humidity": "94%"
+      "weather_temperature": "0°",
+      "weather_type": "Частично облачно",
+      "weather_feeling": "0°",
+      "weather_probability": "2%",
+      "weather_pressure": "766",
+      "weather_wind": " 0.8",
+      "weather_nw": "северо-западный",
+      "weather_humidity": "85%"
     },
     "Вечер": {
-      "weather_temperature": "+3°",
+      "weather_temperature": "-3°",
       "weather_type": "Пасмурно",
-      "weather_feeling": "0°",
-      "weather_probability": "18%",
-      "weather_pressure": "750",
-      "weather_wind": " 2.5",
-      "weather_nw": "западный",
-      "weather_humidity": "93%"
+      "weather_feeling": "-5°",
+      "weather_probability": "2%",
+      "weather_pressure": "767",
+      "weather_wind": " 1.8",
+      "weather_nw": "юго-западный",
+      "weather_humidity": "88%"
     }
   }
 }
