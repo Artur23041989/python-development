@@ -1,12 +1,22 @@
 import requests
 
 
+def get_gender_name(name: str) -> dict:
+    url = f"https://api.genderize.io/?name={name}"
+    response = requests.get(url)
+    data = response.json()
+    print(data)
+
+get_gender_name(name="Alena")
+
+
+
 
 def get_gender_data(name: str) -> dict:
     params = {
         "name": name
     }
-    url = f"https://api.genderize.io/"
+    url = "https://api.genderize.io/"
     response = requests.get(url, params=params)
     data = response.json()
     return data
