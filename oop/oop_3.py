@@ -57,9 +57,10 @@ class Person:
 
     def __str__(self):
         return f"{self.name} {self.age}"
-      # или  return "".join([self.name, self.lastname])
+      # или  return " ".join([self.name, self.lastname])
 
 
 person = Person(name = "Dima", age = 25)
-person_2 = Person.init_from_birthday(name = "Elena", birthday = 1990)
+person_2 = Person.init_from_birthday(name = "Elena", birthday = 1990) # создание объекта с помощью
+                                                                      # альтернативного конструктора
 print(person+person_2)

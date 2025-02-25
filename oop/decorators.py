@@ -6,12 +6,14 @@ import time
 
 
 
-def decorator(func):
-    def wrapper():
+def decorator(func): # `decorator` — это функция, которая принимает другую функцию `func`
+                     # в качестве аргумента.
+    def wrapper(): # Внутри декоратора создается новая функция `wrapper`,
+                   # которая будет обертывать вызов исходной функции `func`.
         print('Before')
         func()
         print('After')
-    return wrapper
+    return wrapper # Декоратор возвращает `wrapper`, который теперь может использоваться вместо изначальной функции.
 
 def repeat(num_times):
     def decorator(func):
@@ -51,8 +53,8 @@ def pars_page():
 def memoize(func):
     cashe = {}
     def wrapper(*args):
-        if args in cashe:
-            return cashe[args]
+        if args in cashe: # если аргумент есть в cashe
+            return cashe[args] # то возвращается значение из cashe для этого аргумента
         else:
             result = func(*args)
             cashe[args] = result
@@ -68,7 +70,7 @@ def fibonacci(n):
     return fibonacci(n - 1) + fibonacci(n - 2)
 
 
-# hello()
+hello()
 # greet(name="Alisa")
 # pars_page()
 start = time.time()

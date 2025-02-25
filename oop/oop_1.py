@@ -20,17 +20,17 @@ class Car:
         self.power = power
         self.country = "Armenia"
         self.currence = currrence
-        self.is_power = False
+        self.is_power = False # указывает на то, что некое условие пока не выполнено
 
         # защищенный атрибут
-        self._color = ""
+        self._color = "green"
 
         # приватный атрибут
         self.__speed = 100
 
         # метод объекта
     def go(self):
-        if self.is_power:
+        if self.is_power: # читается как если машина заведена (проверяем на True)
            print(f"{self.brand} {self.model} TO GO!")
         else:
             print("Car must be POWER ON")
@@ -48,26 +48,30 @@ class Car:
             print("Car must be POWER ON")
 
     def power_on(self):
-        if self.is_power:
+        if self.is_power: # проверяет, включено ли питание автомобиля. `self.is_power` предполагается как
+                          # атрибут экземпляра класса, который хранит информацию о том, включен ли автомобиль.
             print("Car already is POWER ON")
         else:
             print(f"{self.brand} {self.model} POWER ON!")
-            self.is_power = True
+            self.is_power = True # обновляет состояние автомобиля, устанавливая `is_power`
+                                 # в значение `True`, что указывает на то, что автомобиль теперь включен.
 
     def power_off(self):
-        if not self.is_power:
+        if not self.is_power: # проверка на False, находится ли устройство в выключенном состоянии.
+                              # Если `self.is_power` равно `False`, это значит, что устройство уже выключено
             print("Car already is POWER OFF")
-        else:
+        else: # если устройство включено, выполнится код внутри блока `else`.
             print(f"{self.brand} {self.model} POWER OFF!")
-            self.is_power = False
+            self.is_power = False # состояние устройства обновляется: теперь `is_power` становится `False`,
+                                  # что означает, что устройство выключено.
 
     def display_color(self):
         print(self._color)
 
     def set_color(self, new_color):
-        if new_color in Car._COLORS:
+        if new_color in Car._COLORS: # если new_color входит в _COLORS то
             self._color = new_color
-        else:
+        else:  # иначе
             raise ValueError("Неправильный цвет")
 
     # Getter для получения значения скорости
@@ -91,9 +95,13 @@ class Truck(Car):
         super().__init__(brand, model, year, power, currrence="RUB")
         self.capasity = capasity
         self.axles = axles
+        self.__speed = 200
 
     def tilt_trailer(self):
         print(f'{self.brand} {self.model} tilt trailer')
+
+    def display_speed(self):
+        print(self.__speed)
 
     def power_off(self):
         super().power_off()
@@ -107,6 +115,11 @@ truck = Truck(brand='Volvo', model='xxx', year=2019, capasity=4000, axles=6, pow
 truck.power_on()
 truck.tilt_trailer()
 truck.power_off()
+truck.display_color()
+print(truck.speed)
+truck.display_speed()
+print(dir(truck))
+
 
 
 

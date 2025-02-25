@@ -12,4 +12,4 @@ class ClassC(ClassA, ClassB):
 
 obj = ClassC()
 print(obj.method())
-print(ClassC.mro())
+print(ClassC.mro()) # показывает порядок, в котором будут искаться методы
