@@ -1,0 +1,44 @@
+{
+  "Среда, 26 февраля": {
+    "Ночь": {
+      "weather_temperature": "0°",
+      "weather_type": "Преимущественно облачно",
+      "weather_feeling": "0°",
+      "weather_probability": "2%",
+      "weather_pressure": "763",
+      "weather_wind": " 1.3",
+      "weather_nw": "южный",
+      "weather_humidity": "70%"
+    },
+    "Утро": {
+      "weather_temperature": "-1°",
+      "weather_type": "Преимущественно облачно",
+      "weather_feeling": "-3°",
+      "weather_probability": "2%",
+      "weather_pressure": "762",
+      "weather_wind": " 1.6",
+      "weather_nw": "южный",
+      "weather_humidity": "71%"
+    },
+    "День": {
+      "weather_temperature": "+3°",
+      "weather_type": "Преимущественно облачно",
+      "weather_feeling": "+1°",
+      "weather_probability": "2%",
+      "weather_pressure": "763",
+      "weather_wind": " 1.9",
+      "weather_nw": "южный",
+      "weather_humidity": "59%"
+    },
+    "Вечер": {
+      "weather_temperature": "+1°",
+      "weather_type": "Пасмурно",
+      "weather_feeling": "-1°",
+      "weather_probability": "13%",
+      "weather_pressure": "763",
+      "weather_wind": " 1.9",
+      "weather_nw": "южный",
+      "weather_humidity": "73%"
+    }
+  }
+}
