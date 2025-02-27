@@ -1,44 +1,44 @@
 {
-  "Вторник, 25 февраля": {
+  "Четверг, 27 февраля": {
     "Ночь": {
-      "weather_temperature": "0°",
-      "weather_type": "Преимущественно облачно",
-      "weather_feeling": "0°",
-      "weather_probability": "2%",
-      "weather_pressure": "767",
-      "weather_wind": " 1.1",
-      "weather_nw": "южный",
-      "weather_humidity": "68%"
+      "weather_temperature": "+2°",
+      "weather_type": "Пасмурно",
+      "weather_feeling": "+2°",
+      "weather_probability": "14%",
+      "weather_pressure": "765",
+      "weather_wind": " 1.2",
+      "weather_nw": "юго-западный",
+      "weather_humidity": "84%"
     },
     "Утро": {
-      "weather_temperature": "-2°",
-      "weather_type": "Преимущественно облачно",
-      "weather_feeling": "-2°",
+      "weather_temperature": "+1°",
+      "weather_type": "Пасмурно",
+      "weather_feeling": "-1°",
+      "weather_probability": "5%",
+      "weather_pressure": "766",
+      "weather_wind": " 1.4",
+      "weather_nw": "южный",
+      "weather_humidity": "85%"
+    },
+    "День": {
+      "weather_temperature": "+3°",
+      "weather_type": "Пасмурно",
+      "weather_feeling": "+2°",
       "weather_probability": "2%",
       "weather_pressure": "766",
-      "weather_wind": " 3.4",
+      "weather_wind": " 1.5",
       "weather_nw": "южный",
       "weather_humidity": "69%"
     },
-    "День": {
-      "weather_temperature": "+2°",
+    "Вечер": {
+      "weather_temperature": "+1°",
       "weather_type": "Пасмурно",
       "weather_feeling": "0°",
-      "weather_probability": "2%",
-      "weather_pressure": "765",
+      "weather_probability": "3%",
+      "weather_pressure": "766",
       "weather_wind": " 1.7",
       "weather_nw": "южный",
-      "weather_humidity": "60%"
-    },
-    "Вечер": {
-      "weather_temperature": "0°",
-      "weather_type": "Пасмурно",
-      "weather_feeling": "-1°",
-      "weather_probability": "2%",
-      "weather_pressure": "764",
-      "weather_wind": " 1.6",
-      "weather_nw": "южный",
-      "weather_humidity": "71%"
+      "weather_humidity": "72%"
     }
   }
 }
