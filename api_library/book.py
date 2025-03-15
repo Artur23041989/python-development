@@ -28,10 +28,9 @@ class Book:
         info = f"{self.title} - {self.author} ({self.year})"
         if self.genre:
             info += f", Жанр: {self.genre}"
-
         info += f", ISBN: {self.__isbn}"
-
         return info
+
     @staticmethod
     def is_valid_year(year):
         if isinstance(year, int):
@@ -71,8 +70,6 @@ class Book:
             self._year = new_year
         else:
             raise ValueError('Неверное значение для года издания!')
-
-
 
     def get_book_age(self):
         current_year = datetime.today().year
