@@ -19,26 +19,28 @@ def noise_level_description(level): # функция описания уровн
         70: "Будильник",
         40: "Тихая комната"
     }
-    if level in noise_levels:
+    if level in noise_levels: # если значение 'level' находится в ключах словаря 'noise_levels' то:
         return f"Уровень громкости дБ соответствует: {noise_levels[level]}"
     elif level < 40:
         return f"Уровень громкости дБ ниже минимального уровня (40 дБ)."
     elif level > 130:
         return f"Уровень громкости дБ выше максимального уровня (130 дБ)."
-    else:
+    else: # если не выполнятся ни одно из предыдущих условий инициализируем
+        # переменные `lower` и `upper` значением `None`. Это означает, что на данный
+        # момент мы еще не нашли уровни, которые меньше или больше переданного уровня.
         lower = None
         upper = None
 
-        for key in sorted(noise_levels.keys()):
-            if key < level:
+        for key in sorted(noise_levels.keys()): # цыкл, который проходит по каждому ключу в словаре
+            if key < level: # если ключ меньше уровня, мы присваиваем его переменной `lower`
                 lower = key
-            elif key > level:
+            elif key > level: # если ключ больше уровня, мы присваиваем его переменной `upper`
                 upper = key
         return (f"Уровень громкости дБ находится между "f"{lower} дБ ({noise_levels[lower]}) и {upper} Дб ({noise_levels[upper]}).")
 
 user_input = input("Введите уровень шума в децибелах: ")
-try:
-    noise_level = float(user_input)
+try: # начало болка обработки исключений
+    noise_level = float(user_input) # преобразование строки в число с плавающей запятой и сохранение в переменную
     result = noise_level_description(noise_level)
     print(result)
 except ValueError:
